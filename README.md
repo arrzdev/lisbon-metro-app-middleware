@@ -39,6 +39,21 @@ node ace build
 
 and then deploy your newly created artifacts. Or maybe use your CI/CD to do that for you!
 
+## Endpoints
+
+│ Method │ Route │ Handler
+|---|---|---|
+│ HEAD, GET │ /lines │ LinesController.index
+│ HEAD, GET │ /lines/:line │ LinesController.show
+│ HEAD, GET │ /lines/:line/waitingTimes │ LinesController.waitingTimes
+│ HEAD, GET │ /lines/:line/frequency/:day/:hour? │ LinesController.frequency
+|---|---|---|
+│ HEAD, GET │ /stations │ StationsController.index
+│ HEAD, GET │ /stations/:station │ StationsController.show
+│ HEAD, GET │ /stations/:station/waitingTimes │ StationsController.waitingTimes
+|---|---|---|
+│ HEAD, GET │ /healthcheck │ Closure
+
 ## Contributing
 
 1. Fork it (<https://github.com/diconium/lisbon-metro-app-middleware.git>)
