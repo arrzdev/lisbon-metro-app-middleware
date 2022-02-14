@@ -41,18 +41,16 @@ and then deploy your newly created artifacts. Or maybe use your CI/CD to do that
 
 ## Endpoints
 
-│ Method │ Route │ Handler
+| Method | Route | Handler |
 |---|---|---|
-│ HEAD, GET │ /lines │ LinesController.index
-│ HEAD, GET │ /lines/:line │ LinesController.show
-│ HEAD, GET │ /lines/:line/waitingTimes │ LinesController.waitingTimes
-│ HEAD, GET │ /lines/:line/frequency/:day/:hour? │ LinesController.frequency
-|---|---|---|
-│ HEAD, GET │ /stations │ StationsController.index
-│ HEAD, GET │ /stations/:station │ StationsController.show
-│ HEAD, GET │ /stations/:station/waitingTimes │ StationsController.waitingTimes
-|---|---|---|
-│ HEAD, GET │ /healthcheck │ Closure
+| HEAD, GET | /lines | LinesController.index |
+| HEAD, GET | /lines/:line | LinesController.show |
+| HEAD, GET | /lines/:line/waitingTimes | LinesController.waitingTimes |
+| HEAD, GET | /lines/:line/frequency/:day/:hour? | LinesController.frequency |
+| HEAD, GET | /stations | StationsController.index |
+| HEAD, GET | /stations/:station | StationsController.show |
+| HEAD, GET | /stations/:station/waitingTimes | StationsController.waitingTimes |
+| HEAD, GET | /healthcheck | Closure |
 
 ## Contributing
 
