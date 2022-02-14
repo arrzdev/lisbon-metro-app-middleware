@@ -25,12 +25,9 @@ export default class LinesController {
   public async frequency({ request }: HttpContextContract) {
     const { line: lineId, day, hour } = request.params();
 
-    const data = await Cache.get(
+    return await Cache.get(
       `line-${lineId}-${day}-${hour ?? ''}-frequency`,
       async () => await MetroService.getLineFrequency(lineId, day, hour),
     );
-
-    console.log(data);
-    return data;
   }
 }
