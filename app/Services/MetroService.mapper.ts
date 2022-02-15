@@ -1,5 +1,5 @@
 import { DestinationInformation } from 'Contracts/interfaces/data/DestionationInformation.model';
-import { LineColor, LineStatus } from 'Contracts/interfaces/data/LineStatus.model';
+import { LineStatus } from 'Contracts/interfaces/data/LineStatus.model';
 import {
   DestinationInformationData,
   FrequencyInfoData,

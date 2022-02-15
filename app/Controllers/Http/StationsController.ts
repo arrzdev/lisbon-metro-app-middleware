@@ -1,7 +1,6 @@
 import { HttpContextContract } from '@ioc:Adonis/Core/HttpContext';
 import MetroService from '@ioc:diconium/MetroService';
 import Cache from '@ioc:Adonis/Addons/Adonis5-Cache';
-import { StationStatus } from 'Contracts/interfaces/data/StationStatus.model';
 import { StationInfo } from 'Contracts/interfaces/data/StationInfo.model';
 
 export default class StationsController {
