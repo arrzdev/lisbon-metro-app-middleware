@@ -1,7 +1,7 @@
 import { CacheConfig } from '@ioc:Adonis/Addons/Adonis5-Cache';
 
 export default {
-  recordTTL: 5, // record ttl amount,
+  recordTTL: 1, // record ttl amount,
 
   ttlUnits: 'minutes', // time units for ttl record
 
