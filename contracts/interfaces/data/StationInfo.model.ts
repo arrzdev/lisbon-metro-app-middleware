@@ -3,7 +3,7 @@ export interface StationInfo {
   name: string;
   position: {
     lat: string;
-    long: string;
+    lon: string;
   };
   urls: string[];
   line: string[];

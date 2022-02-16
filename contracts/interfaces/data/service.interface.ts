@@ -6,7 +6,7 @@ export interface StationInfoData {
   stop_id: string;
   stop_name: string;
   stop_lat: string;
-  stop_long: string;
+  stop_lon: string;
   stop_url: string;
   linha: string;
   zone_id: string;

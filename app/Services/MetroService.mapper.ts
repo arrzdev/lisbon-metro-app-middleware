@@ -33,7 +33,7 @@ export class MetroServiceMapper {
       name: data.stop_name,
       position: {
         lat: data.stop_lat,
-        long: data.stop_long,
+        lon: data.stop_lon,
       },
       urls: MetroServiceMapper.parseArrays(data.stop_url),
       line: MetroServiceMapper.parseArrays(data.linha).map((s) => s.toLocaleLowerCase()),
