@@ -1,4 +1,4 @@
-import { DestinationInformation } from 'Contracts/interfaces/data/DestionationInformation.model';
+import { DestinationInformation } from 'Contracts/interfaces/data/DestinationInformation.model';
 import { LineStatus } from 'Contracts/interfaces/data/LineStatus.model';
 import {
   DestinationInformationData,

@@ -5,10 +5,7 @@ import { StationInfo } from 'Contracts/interfaces/data/StationInfo.model';
 
 export default class StationsController {
   public async index() {
-    return await Cache.get<StationInfo[]>(
-      `stations`,
-      async () => await MetroService.getStationsInfo(),
-    );
+    return await Cache.get<StationInfo[]>(`stations`, async () => await MetroService.getStationsInfo());
   }
 
   public async show({ request }: HttpContextContract) {
@@ -24,10 +21,7 @@ export default class StationsController {
     const stationId = request.param('station');
 
     if (stationId === 'all') {
-      return await Cache.get(
-        `station-all-waitingTime`,
-        async () => await MetroService.getStationsWaitingTimes(),
-      );
+      return await Cache.get(`station-all-waitingTime`, async () => await MetroService.getStationsWaitingTimes());
     }
 
     return await Cache.get(

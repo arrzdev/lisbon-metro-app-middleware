@@ -21,5 +21,6 @@
 import Route from '@ioc:Adonis/Core/Route';
 import './routes/line';
 import './routes/station';
+import './routes/destination';
 
 Route.get('/healthcheck', async () => 'UP!');
