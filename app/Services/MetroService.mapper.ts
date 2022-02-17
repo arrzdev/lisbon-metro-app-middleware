@@ -10,7 +10,7 @@ import {
 import { StationInfo } from 'Contracts/interfaces/data/StationInfo.model';
 import { StationStatus } from 'Contracts/interfaces/data/StationStatus.model';
 import { FrequencyInfo } from 'Contracts/interfaces/data/FrequencyInfo.model';
-import { LineMapping } from '../../config/metro';
+import { LineMapping } from 'Config/metro';
 
 export class MetroServiceMapper {
   public static fromStationData(data: StationStatusData): StationStatus {

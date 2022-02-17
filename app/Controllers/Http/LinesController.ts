@@ -16,10 +16,7 @@ export default class LinesController {
   public async waitingTimes({ request }: HttpContextContract) {
     const lineId = request.param('line');
 
-    return await Cache.get(
-      `line-${lineId}-waitingTime`,
-      async () => await MetroService.getLineWaitingTimes(lineId),
-    );
+    return await Cache.get(`line-${lineId}-waitingTime`, async () => await MetroService.getLineWaitingTimes(lineId));
   }
 
   public async frequency({ request }: HttpContextContract) {

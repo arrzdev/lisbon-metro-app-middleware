@@ -27,6 +27,7 @@ export default class StationsController {
     return await Cache.get(
       `station-${stationId}-waitingTime`,
       async () => await MetroService.getStationWaitingTimes(stationId),
+      1800,
     );
   }
 }
