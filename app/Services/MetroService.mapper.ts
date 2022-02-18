@@ -36,7 +36,7 @@ export class MetroServiceMapper {
         lon: data.stop_lon,
       },
       urls: MetroServiceMapper.parseArrays(data.stop_url),
-      line: MetroServiceMapper.parseArrays(data.linha).map((s) => s.toLocaleLowerCase()),
+      line: MetroServiceMapper.parseArrays(data.linha).map(MetroServiceMapper.mapColor).filter(Boolean) as string[],
       zoneId: data.zone_id,
     };
   }
@@ -58,9 +58,7 @@ export class MetroServiceMapper {
   }
 
   public static fromFrequencyInfoData(data: FrequencyInfoData): FrequencyInfo {
-    const line = Object.entries(LineMapping).find(
-      ([, value]) => value === data.Linha.toLowerCase(),
-    );
+    const line = Object.entries(LineMapping).find(([, value]) => value === data.Linha.toLowerCase());
     if (!line) {
       throw `${data.Linha} is unknown`;
     }
@@ -78,5 +76,9 @@ export class MetroServiceMapper {
       .replace(/[\[\]]/g, '')
       .split(',')
       .map((s) => s.trim());
+  }
+
+  private static mapColor(color: string) {
+    return Object.entries(LineMapping).find(([, lineColor]) => lineColor === color.toLocaleLowerCase())?.[0];
   }
 }
